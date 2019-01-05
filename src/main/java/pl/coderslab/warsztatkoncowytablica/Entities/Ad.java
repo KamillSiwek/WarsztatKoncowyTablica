@@ -9,7 +9,6 @@ import java.util.List;
 
 @Entity
 public class Ad {
-
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   private Long id;
@@ -21,4 +20,61 @@ public class Ad {
   @ManyToOne private User author;
   @OneToMany(mappedBy = "ad")
   private List<Comment> comments = new ArrayList<Comment>();
+
+
+  public Long getId() {
+    return id;
+  }
+
+  public void setId(Long id) {
+    this.id = id;
+  }
+
+  public String getTitle() {
+    return title;
+  }
+
+  public void setTitle(String title) {
+    this.title = title;
+  }
+
+  public String getDescription() {
+    return description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+  public LocalDateTime getExpirationDate() {
+    return expirationDate;
+  }
+
+  public void setExpirationDate(LocalDateTime expirationDate) {
+    this.expirationDate = expirationDate;
+  }
+
+  public Status getAdStatus() {
+    return adStatus;
+  }
+
+  public void setAdStatus(Status adStatus) {
+    this.adStatus = adStatus;
+  }
+
+  public User getAuthor() {
+    return author;
+  }
+
+  public void setAuthor(User author) {
+    this.author = author;
+  }
+
+  public List<Comment> getComments() {
+    return comments;
+  }
+
+  public void setComments(List<Comment> comments) {
+    this.comments = comments;
+  }
 }
