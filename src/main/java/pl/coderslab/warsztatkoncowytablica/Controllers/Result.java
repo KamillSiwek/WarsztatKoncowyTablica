@@ -49,13 +49,13 @@ public class Result {
   public static Result ok(Object data) {
     Result result = new Result("200");
     result.setData(data);
-    result.setMessage("OK");
+    result.setMessage("Super! Jest zapisane!");
     return result;
   }
 
   public static Result error(String message) {
     Result result = new Result("500");
-    result.setMessage("ERROR");
+    result.setMessage("Coś poszło nie tak :/");
     result.getErrors().add(message);
     return result;
   }

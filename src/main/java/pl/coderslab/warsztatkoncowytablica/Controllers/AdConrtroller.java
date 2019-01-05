@@ -14,7 +14,7 @@ public class AdConrtroller {
     private final AdService adService;
 
     @Autowired
-    public AdController(AdService adService) {
+    public AdConrtroller(AdService adService) {
         this.adService = adService;
     }
 

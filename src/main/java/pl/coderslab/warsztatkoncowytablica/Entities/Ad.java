@@ -1,5 +1,6 @@
 package pl.coderslab.warsztatkoncowytablica.Entities;
 
+import pl.coderslab.warsztatkoncowytablica.DTO.AdDto;
 import pl.coderslab.warsztatkoncowytablica.Enums.Status;
 
 import javax.persistence.*;
@@ -76,5 +77,14 @@ public class Ad {
 
   public void setComments(List<Comment> comments) {
     this.comments = comments;
+  }
+
+  @Transient
+  public AdDto toDto() {
+    AdDto dto = new AdDto();
+    dto.setId(this.getId());
+    dto.setTitle(this.getTitle());
+    dto.setDescription(this.getDescription());
+    return dto;
   }
 }

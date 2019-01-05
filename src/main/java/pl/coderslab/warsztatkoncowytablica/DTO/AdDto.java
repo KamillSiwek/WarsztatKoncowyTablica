@@ -4,18 +4,39 @@ package pl.coderslab.warsztatkoncowytablica.DTO;
 
 public class AdDto {
 
-    
+    private Long Id;
+    private String title;
+    private String description;
 
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.AUTO)
-//    private Long id;
-//
-//    private String title;
-//    private String description;
-//    private LocalDateTime expirationDate;
-//    private Status adStatus;
-//    @ManyToOne
-//    private User author;
-//    @OneToMany(mappedBy = "ad")
-//    private List<Comment> comments = new ArrayList<Comment>();
+    public AdDto() {
+    }
+
+    public AdDto(String title, String description) {
+        this.title = title;
+        this.description = description;
+    }
+
+    public Long getId() {
+        return Id;
+    }
+
+    public void setId(Long id) {
+        Id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 }
