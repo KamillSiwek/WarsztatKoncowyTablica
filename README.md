@@ -1,6 +1,6 @@
 # Workshop project - Notice Board
 This is a workshop project which i made during my curse in Coders Lab. 
-This is application designed for publication of local sales announcements.
+This is application designed for simple task scheduling.
 The application will provide a section of functionality offered by dedicated solutions of this type.
 
 ## Built With
